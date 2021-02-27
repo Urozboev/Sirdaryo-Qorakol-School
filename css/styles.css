@@ -791,6 +791,7 @@ input[type='checkbox'] {
 	-moz-transform: scale(1.15);
 	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
+	cursor: pointer;
 } 
 /* end of hover animation */
 
@@ -875,7 +876,7 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card-body {
-	padding: 2.25rem 2rem 2.125rem 2rem;
+	padding: 1.5rem;
 	border: 1px solid #ebe8e8;
 	border-bottom-left-radius: 0.375rem;
 	border-bottom-right-radius: 0.375rem;
@@ -1443,7 +1444,7 @@ table {
 	color: #484a46;
 	font-weight: 700;
 	font-size: 1.75rem;
-	line-height: 2rem;
+	/* line-height: 2rem; */
 }
 
 .col-lg-6 table tr td {
@@ -1689,6 +1690,15 @@ body::-webkit-scrollbar {
 /*****************************/
 /*     21. Media Queries     */
 /*****************************/	
+/* Min-width width 576px */
+@media (min-width: 300px) {
+	table {
+		width: 50%;
+		margin: auto;
+	}
+}
+
+
 /* Min-width width 768px */
 @media (min-width: 768px) {
 	
