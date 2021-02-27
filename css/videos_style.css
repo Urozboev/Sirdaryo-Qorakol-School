@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.container {
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 20%;
+    background: url('../leaves/1.png') center center no-repeat;
+    width: 120%;
+    height: 120%;
+    z-index: -100;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    background: url('../leaves/2.png') center center no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -200;
+    animation: animBox 13s infinite;
+}
+
+@keyframes animBox {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body::-webkit-scrollbar {
+	width: 0.8em;
+  }
+   
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  }
+   
+body::-webkit-scrollbar-thumb {
+	background-color: #153e52;
+	outline: 1px solid slategrey;
+	border-radius: 10px;
+	height: 1px;
+	width: 10px;
+	outline: none;
+	box-shadow: 0 0 20px #153e52, 0 0 50px #153e52, 0 0 100px #153e52;
+}
+
+.row {
+    min-width: 320px;
+
+}
+
+.home {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    background-color: crimson;
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 10000;
+    outline: none;
+    transition: all .5s;
+}
+
+.home:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.home a {
+    text-decoration: none;
+}
+
+.home span {
+    color: #fff;
+    font-size: 30px;
+}
+
+.new_video {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: rgba(202, 202, 202, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 0;
+    position: relative;
+}
+
+.new_video iframe {
+    width: 90%;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.new_video p {
+    color: rgb(0,169,0);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* .new_video p:nth-child(3) {
+    color: #445760;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 0;
+    text-align: center;
+} */
