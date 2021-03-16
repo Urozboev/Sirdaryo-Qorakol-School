@@ -39,6 +39,13 @@ body::after {
     animation: animBox 13s infinite;
 }
 
+@media (min-width: 1400px) {
+    body::after {
+        left: -25%;
+    }
+}
+
+
 @keyframes animBox {
     0% {
         transform: scale(1);
